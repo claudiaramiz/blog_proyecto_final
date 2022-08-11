@@ -7,11 +7,13 @@ import HomePage from '../components/HomePage';
 import LoginPage from '../components/LoginPage';
 import NotFoundPage from '../components/NotFoundPage';
 import RegisterPage from '../components/RegisterPage';
+import Layout from '../components/Layout';
 
 
 function AppRouter() {
   return (
     <BrowserRouter>
+    <Layout>
       <Routes>
         <Route path='/' element={<HomePage></HomePage>}></Route>
         <Route path='/login' element={<LoginPage></LoginPage>}></Route>
@@ -21,6 +23,7 @@ function AppRouter() {
         <Route path='/blog/:blogid' element={<BlogPage></BlogPage>}></Route>
         <Route path='*' element={<NotFoundPage></NotFoundPage>}></Route>
       </Routes>
+      </Layout>
     </BrowserRouter>
   )
 }
