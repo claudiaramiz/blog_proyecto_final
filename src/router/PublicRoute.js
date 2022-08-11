@@ -6,7 +6,7 @@ export default function PublicRoute(props) {
     const {user} = useAuth();
 
     if (user)
-        return <Redirect to="/bloglist" />
+        return <Navigate to="/bloglist" />
 
     return (
         <Route {...props} />
